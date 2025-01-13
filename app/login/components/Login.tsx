@@ -11,11 +11,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { AiOutlineGoogle } from 'react-icons/ai';
 import { WaitingForMagicLink } from './WaitingForMagicLink';
 
-import male from "/public/male.png";
-import female from "/public/female.png";
-import product_users from "/public/product_users.png";
-import introduce from "/public/introduce.png";
-import bannerImg from "/public/banner_pic.png";
+import bannerImg from "/public/login_banner.png";
 
 type Inputs = {
   email: string;
@@ -110,16 +106,16 @@ export const Login = ({
           <div className='flex items-center justify-center p-8'>
             <div className='flex flex-col gap-4  p-4 rounded-xl  w-full'>
               <h1 className="text-6xl font-bold" style={{ color: "white" }}>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-400">Welcome</span>
+                <span className="text-transparent text-[#167ef9]">Welcome</span>
               </h1>
-              <p className='text-2xl opacity-60' style={{color:"white"}}>Sign in or create an account to get started.</p>
+              <p className='text-2xl opacity-60'>Sign in or create an account to get started.</p>
               <Button
                 onClick={signInWithGoogle}
                 variant={"outline"}
-                className="font-semibold py-6"
+                className="w-full py-6 text-[white] px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#167ef9] hover:bg-[#167ef9] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all"
                 style={{color:"white"}}
               >
-                <AiOutlineGoogle size={20} style={{color:"white"}}/>
+                <AiOutlineGoogle size={20}/>
                 Continue with Google
               </Button>
               <OR />
@@ -128,7 +124,6 @@ export const Login = ({
                 <div className='flex flex-col gap-4'>
                   <div className='flex flex-col gap-2'>
                     <Input
-                    style={{color:"white"}}
                     className='py-6'
                       type='email'
                       placeholder='Email'
@@ -160,7 +155,7 @@ export const Login = ({
                   disabled={isSubmitting}
                   variant='outline'
                   type='submit'
-                  className="w-full py-6 px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-gradient-to-r from-orange-500 to-orange-500 text-white hover:from-orange-500 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition-all"
+                  className="w-full py-6 text-[white] px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#167ef9] hover:bg-[#167ef9] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all"
                 >
                   Continue with Email
                 </Button>
@@ -172,7 +167,7 @@ export const Login = ({
           <img
             src={bannerImg.src}
             alt="AI headshot"
-            className="rounded-lg object-cover w-[500px] h-[500px]"
+            className="rounded-lg object-cover w-full"
             style={{ float: "right" }} />
         </div>
       </div>

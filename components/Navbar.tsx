@@ -15,7 +15,7 @@ import React from 'react';
 import { Database } from '@/types/supabase';
 import ClientSideCredits from './realtime/ClientSideCredits';
 
-import arrow from '/public/arrow.png';
+import logo from '/public/logo.png';
 import product_use_avatar from '/public/product_use_avatar.png';
 
 export const dynamic = 'force-dynamic';
@@ -56,16 +56,17 @@ export default async function Navbar() {
             </div>
             <div className='lg:w-1/4 w-full  md:px-4'>
               <span>
-                <span className='text-orange-500'>✔</span>17,943+ headshots created
+                <span className='text-orange-500'>✔</span>2413,241+ headshots created
               </span>
             </div>
           </div>
         </div>
 
-        <div className='flex w-full px-4 lg:px-40 py-4 items-center border-b text-center gap-8 justify-between mynav'>
+        <div className='flex w-full px-4 lg:px-40 py-2 items-center border-b text-center gap-8 justify-between mynav'>
           <div className='flex gap-2 h-full'>
-            <Link href='/'>
-              <h1 className='font-bold text-[22px]'>Headshots AI</h1>
+            <Link href='/' className="flex" style={{justifyContent:"center", alignItems:"center",justifyItems:"center"}}>
+              <img src={logo.src} alt="logo" className="h-[60px]"/>
+              <label className='font-bold text-[30px] text-[#167ef9]'>HEADSHOT</label>
             </Link>
           </div>
 
@@ -103,7 +104,7 @@ export default async function Navbar() {
                   </Button>
                 </Link>
                 <Link href='/login'>
-                  <Button className='lg:w-full py-6 px-2 md:px-8 shadow-md text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-gradient-to-r from-orange-500 to-orange-500 text-white hover:from-orange-500 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition-all'>
+                  <Button className='lg:w-full py-6 px-2 md:px-8 shadow-md text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#167ef9] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all'>
                     Get Started
                   </Button>
                 </Link>

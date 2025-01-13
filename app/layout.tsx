@@ -24,7 +24,7 @@ export default function RootLayout({ children }: any) {
             <Navbar />
           </Suspense>
         </section>
-        <main className="flex flex-1 flex-col items-center py-16"  style={{background:"#1c1b1b"}}>
+        <main className="flex flex-1 flex-col items-center py-16">
           {children}
         </main>
         <Footer />

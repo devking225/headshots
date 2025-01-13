@@ -5,14 +5,14 @@ import { Rate } from 'antd';
 export default function PricingSection() {
   return (
     <div className='w-full px-20 mt-16 mb-16 p-8 rounded-lg space-y-8 bg-gray-100'>
-      <h2 className='text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-400'>
+      <h2 className='text-5xl font-bold text-[#167ef9]'>
         Pricing
       </h2>
       <div className='flex flex-wrap justify-center lg:space-x-4 space-y-4 lg:space-y-0 items-stretch'>
         {pricingOptions.map((option, index) => (
           <div
             key={index}
-            className={`flex flex-col border border-orange-500 rounded-lg p-8 w-full lg:w-1/4 ${option.bgColor} `}
+            className={`flex flex-col border border-blue-500 rounded-lg p-8 w-full lg:w-1/4 ${option.bgColor} `}
           >
             <div className='flex-grow space-y-4'>
               <h3 className='text-2xl font-semibold text-center'>{option.title}</h3>
@@ -47,7 +47,7 @@ export default function PricingSection() {
             <div className='mt-10 text-center'>
               <Link href='/login'>
                 {' '}
-                <Button className='w-3/4 py-6 px-2 md:px-8 text-md shadow-lg flex md:inline-flex justify-center items-center rounded-full  font-semibold bg-gradient-to-r from-orange-500 to-yellow-400 text-white hover:from-orange-500 hover:to-orange-600  focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition-all'>
+                <Button className='w-3/4 py-6 px-2 md:px-8 text-md shadow-lg flex md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#167ef9] hover:bg-[#167ef9] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all'>
                   {option.buttonText}
                 </Button>
               </Link>
