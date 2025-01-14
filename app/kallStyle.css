@@ -14,7 +14,7 @@
 }
 
 .total {
-    z-index: 9999;
+    z-index: 1;
 }
 
 .bucard {}
@@ -129,4 +129,11 @@
     100% {
         transform: translateX(-50%);
     }
+}
+.hover\:bg-\[\#20aca0\]:hover {
+    box-shadow: 0px 4px 7px grey;
+}
+.PriceColumn-button {
+    background-color: #20aca0!important;
+    border-color: #20aca0!important;
 }

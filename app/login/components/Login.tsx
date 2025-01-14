@@ -12,6 +12,8 @@ import { AiOutlineGoogle } from 'react-icons/ai';
 import { WaitingForMagicLink } from './WaitingForMagicLink';
 
 import bannerImg from "/public/login_banner.png";
+import bannerLeft from "/public/left-banner.webp";
+import bannerRight from "/public/right-banner.webp";
 
 type Inputs = {
   email: string;
@@ -102,20 +104,27 @@ export const Login = ({
   return (
     <>
       <div className="flex flex-col lg:flex-row items-center gap-8 w-full px-40">
-        <div className="flex flex-col space-y-4 lg:w-2/5 w-full">
+        <div className="lg:w-1/4 w-full mt-8 lg:mt-0">
+          <img
+            src={bannerLeft.src}
+            alt="AI headshot"
+            className="rounded-lg object-cover w-full"
+            style={{ float: "right" }} />
+        </div>
+        <div className="flex flex-col space-y-4 lg:w-2/4 w-full" style={{textAlign:"center"}}>
           <div className='flex items-center justify-center p-8'>
             <div className='flex flex-col gap-4  p-4 rounded-xl  w-full'>
               <h1 className="text-6xl font-bold" style={{ color: "white" }}>
-                <span className="text-transparent text-[#167ef9]">Welcome</span>
+                <span className="text-[#1b145d]">Welcome</span>
               </h1>
               <p className='text-2xl opacity-60'>Sign in or create an account to get started.</p>
               <Button
                 onClick={signInWithGoogle}
                 variant={"outline"}
                 className="w-full py-6 text-[white] px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] hover:bg-[#20aca0] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all"
-                style={{color:"white"}}
+                style={{ color: "white" }}
               >
-                <AiOutlineGoogle size={20}/>
+                <AiOutlineGoogle size={20} />
                 Continue with Google
               </Button>
               <OR />
@@ -124,7 +133,7 @@ export const Login = ({
                 <div className='flex flex-col gap-4'>
                   <div className='flex flex-col gap-2'>
                     <Input
-                    className='py-6'
+                      className='py-6'
                       type='email'
                       placeholder='Email'
                       {...register('email', {
@@ -163,15 +172,14 @@ export const Login = ({
             </div>
           </div>
         </div>
-        <div className="lg:w-3/5 w-full mt-8 lg:mt-0">
+        <div className="lg:w-1/4 w-full mt-8 lg:mt-0">
           <img
-            src={bannerImg.src}
+            src={bannerRight.src}
             alt="AI headshot"
             className="rounded-lg object-cover w-full"
             style={{ float: "right" }} />
         </div>
       </div>
-
     </>
   );
 };

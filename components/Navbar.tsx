@@ -66,7 +66,7 @@ export default async function Navbar() {
           <div className='flex gap-2 h-full'>
             <Link href='/' className="flex" style={{justifyContent:"center", alignItems:"center",justifyItems:"center"}}>
               <img src={logo.src} alt="logo" className="h-[60px]"/>
-              <label className='font-bold text-[30px] text-[#1b145d]'>HEADSHOT</label>
+              <label className='font-bold text-[30px] text-[#1b145d]' style={{cursor:"pointer"}}>INSTANT HEADSHOTS</label>
             </Link>
           </div>
 
@@ -104,7 +104,7 @@ export default async function Navbar() {
                   </Button>
                 </Link>
                 <Link href='/login'>
-                  <Button className='lg:w-full py-6 px-2 md:px-8 shadow-md text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all'>
+                  <Button className='lg:w-full py-6 px-2 md:px-8 shadow-md text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] focus:ring-2 focus:ring-offset-2 transition-all'>
                     Get Started
                   </Button>
                 </Link>
@@ -114,7 +114,7 @@ export default async function Navbar() {
             {user && (
               <div className='flex flex-row gap-4 text-center align-middle justify-center'>
                 {stripeIsConfigured && <ClientSideCredits creditsRow={credits ? credits : null} />}
-                <DropdownMenu>
+                <DropdownMenu style={{zIndex:"9999"}}>
                   <DropdownMenuTrigger asChild className='cursor-pointer'>
                     <AvatarIcon height={24} width={24} className='text-primary' />
                   </DropdownMenuTrigger>

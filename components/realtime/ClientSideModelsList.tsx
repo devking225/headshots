@@ -74,13 +74,13 @@ export default function ClientSideModelsList({
       {models && models.length === 0 && (
         <div className="flex flex-col gap-4 items-center pt-[100px]">
           <FaImages size={64} className="text-gray-500" />
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text text-[#167ef9] pb-4">
+          <h1 className="text-5xl font-bold bg-clip-text text-[#1b145d] pb-4">
             Get started by training your first model.
           </h1>
           <div className="w-[400px] text-align" style={{margin:"auto",textAlign:"center"
           }}>
             <Link href={packsIsEnabled ? "/overview/packs" : "/overview/models/train/raw-tune"}>
-              <Button className="w-full py-6 text-[white] px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] hover:bg-[#20aca0] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">Train model</Button>
+              <Button className="w-full py-6 text-[white] px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] hover:bg-[#20aca0] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">TRAIN MODEL</Button>
             </Link>
           </div>
         </div>

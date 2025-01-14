@@ -21,7 +21,7 @@ export default async function Index({ params }: { params: { pack: string } }) {
         className="flex flex-1 flex-col gap-2 px-2"
       >
         <Link href={packsIsEnabled ? "/overview/packs" : "/overview"} className="text-sm w-fit">
-          <Button variant={"outline"} className="w-[300px] py-6 px-2 md:px-8 text-md shadow-lg flex w-full md:inline-flex justify-center items-center rounded-full  font-semibold bg-gradient-to-r from-orange-500 to-yellow-400 text-white hover:from-orange-500 hover:to-orange-600  focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition-all">
+          <Button variant={"outline"} className="w-[500px] py-6 text-[white] px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] hover:bg-[#20aca0] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
             <FaArrowLeft className="mr-2" />
             Go Back
           </Button>

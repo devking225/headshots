@@ -224,17 +224,16 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                 control={form.control}
                 name='name'
                 render={({ field }) => (
-                  <FormItem className='w-full rounded-md'>
-                    <FormLabel className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-400">Name</FormLabel>
-                    <FormDescription className="text-2xl">
+                  <FormItem className='w-full rounded-md py-3'>
+                    <FormLabel className="text-4xl text-transparent text-[#1b145d]">NAME</FormLabel>
+                    <FormDescription className="text-1xl">
                       Give your model a name so you can easily identify it later.
                     </FormDescription>
                     <FormControl>
                       <Input
                         placeholder='e.g. Natalie Headshots'
                         {...field}
-                        className='max-w-screen-sm py-6'
-                        style={{ color: "white" }}
+                        className='max-w-screen-sm py-3'
                         autoComplete='off'
                       />
                     </FormControl>
@@ -242,9 +241,9 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                   </FormItem>
                 )}
               />
-              <div className='flex flex-col gap-4'>
-                <FormLabel className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-400">Type</FormLabel>
-                <FormDescription className="text-2xl">Select the type of headshots you want to generate.</FormDescription>
+              <div className='flex flex-col gap-4 py-3'>
+                <FormLabel className="text-4xl text-[#1b145d]">TYPE</FormLabel>
+                <FormDescription className="text-1xl">Select the type of headshots you want to generate.</FormDescription>
                 <RadioGroup
                   defaultValue={modelType}
                   className='grid grid-cols-3 gap-4'
@@ -257,7 +256,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                     <RadioGroupItem value='man' id='man' className='peer sr-only' aria-label='man' />
                     <Label
                       htmlFor='man'
-                      className='text-white flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
+                      className='text-white flex flex-col items-center justify-between rounded-md border-2 border-muted bg-[#20aca0] p-4 hover:text-accent-foreground peer-data-[state=checked]:border-white [&:has([data-state=checked])]:border-white'
                     >
                       <FaMale className='mb-3 h-6 w-6' />
                       Man
@@ -273,7 +272,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                     />
                     <Label
                       htmlFor='woman'
-                      className='text-white flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
+                      className='text-white flex flex-col items-center justify-between rounded-md border-2 border-muted bg-[#20aca0] p-4 hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
                     >
                       <FaFemale className='mb-3 h-6 w-6' />
                       Woman
@@ -288,7 +287,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                     />
                     <Label
                       htmlFor='person'
-                      className='text-white flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
+                      className='text-white flex flex-col items-center justify-between rounded-md border-2 border-muted bg-[#20aca0] p-4 hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
                     >
                       <FaRainbow className='mb-3 h-6 w-6' />
                       Unisex
@@ -298,13 +297,13 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
               </div>
             </div>
             <div className="flex flex-col space-y-4 lg:w-1/5 w-full"></div>
-            <div className="flex flex-col space-y-4 lg:w-2/5 w-full" style={{textAlign:"center"}}>
+            <div className="flex flex-col space-y-4 lg:w-2/5 w-full" style={{ textAlign: "center" }}>
               <div
                 {...getRootProps()}
                 className=' rounded-md justify-center align-middle cursor-pointer flex flex-col gap-4'
               >
-                <FormLabel className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-400">Samples</FormLabel>
-                <FormDescription className="text-2xl">
+                <FormLabel className="text-4xl text-[#1b145d]">SAMPLES</FormLabel>
+                <FormDescription className="text-1xl">
                   Upload 4-10 images of the person you want to generate headshots for.
                 </FormDescription>
 
@@ -324,7 +323,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                 {files.length > 0 && (
                   <div className='flex flex-row gap-4 flex-wrap'>
                     {files.map((file) => (
-                      <div key={file.name} className='flex flex-col gap-1'>
+                      <div key={file.name} className='flex flex-col gap-1 text-align'>
                         <img
                           src={URL.createObjectURL(file)}
                           className='rounded-md w-24 h-24 object-cover'
@@ -333,7 +332,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                         <Button
                           variant='outline'
                           size={'sm'}
-                          className='w-full mt-[20px] py-6 px-2 md:px-8 text-md shadow-lg flex w-full md:inline-flex justify-center items-center rounded-full  font-semibold bg-gradient-to-r from-orange-500 to-yellow-400 text-white hover:from-orange-500 hover:to-orange-600  focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition-all'
+                          className='text-[15px] py-3 text-[white] px-2  mt-4 shadow-md md:mt-6  flex md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] hover:bg-[#20aca0] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all'
                           onClick={() => removeFile(file)}
                         >
                           Remove
@@ -343,7 +342,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                   </div>
                 )}
 
-                <Button type='submit' className='w-full mt-[20px] py-6 px-2 md:px-8 text-md shadow-lg flex w-full md:inline-flex justify-center items-center rounded-full  font-semibold bg-gradient-to-r from-orange-500 to-yellow-400 text-white hover:from-orange-500 hover:to-orange-600  focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition-all' isLoading={isLoading}>
+                <Button type="submit" variant={"outline"} className="w-[500px] py-6 text-[white] px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] hover:bg-[#20aca0] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
                   Train Model {stripeIsConfigured && <span className='ml-1'>(1 Credit)</span>}
                 </Button>
               </div>

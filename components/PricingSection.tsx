@@ -5,14 +5,14 @@ import { Rate } from 'antd';
 export default function PricingSection() {
   return (
     <div className='w-full px-20 mt-16 mb-16 p-8 rounded-lg space-y-8 bg-gray-100'>
-      <h2 className='text-5xl font-bold text-[#167ef9]'>
+      <h2 className='text-5xl font-bold text-[#1c1b1b]'>
         Pricing
       </h2>
       <div className='flex flex-wrap justify-center lg:space-x-4 space-y-4 lg:space-y-0 items-stretch'>
         {pricingOptions.map((option, index) => (
           <div
             key={index}
-            className={`flex flex-col border border-blue-500 rounded-lg p-8 w-full lg:w-1/4 ${option.bgColor} `}
+            className={`flex flex-col border border-[blue]-500 rounded-lg p-8 w-full lg:w-1/4 ${option.bgColor} `}
           >
             <div className='flex-grow space-y-4'>
               <h3 className='text-2xl font-semibold text-center'>{option.title}</h3>
@@ -80,30 +80,30 @@ const columns = [
 const pricingOptions = [
   {
     title: 'Starter',
-    price: '$18',
+    price: '$1',
     description: 'Perfect for individuals looking to enhance their online presence.',
-    features: ['4 AI Headshots'],
-    styles: ['12 styles'],
+    features: ['1 Credit'],
+    styles: ['+50 Models'],
     resolutions: ['1536 * 2304 image resolution'],
     buttonText: 'Choose Starter',
     bgColor: 'bg-white',
   },
   {
     title: 'Basic',
-    price: '$32',
+    price: '$3',
     description: 'Ideal for professionals requiring frequent updates to their profiles.',
-    features: ['12 AI Headshots'],
-    styles: ['20 styles'],
+    features: ['3 Credits'],
+    styles: ['+50 Models'],
     resolutions: ['836 * 1404 image resolution'],
     buttonText: 'Choose Basic',
     bgColor: 'bg-blue-50',
   },
   {
     title: 'Premium',
-    price: '$49',
+    price: '$5',
     description: 'The best value with unlimited possibilities.',
-    features: ['20 AI Headshots'],
-    styles: ['50 styles'],
+    features: ['5 Credits'],
+    styles: ['+50 Models'],
     resolutions: ['1536 * 2304 image resolution'],
     buttonText: 'Choose Premium',
     bgColor: 'bg-white',

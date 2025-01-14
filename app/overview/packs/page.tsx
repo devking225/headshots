@@ -33,7 +33,7 @@ export default async function Index() {
         </Link>
         <Card style={{padding:"0"}}>
           <CardHeader>
-            <CardTitle  className="text-4xl text-transparent text-[#167ef9]">Packs Gallery</CardTitle>
+            <CardTitle  className="text-4xl text-transparent text-[#1b145d]">PACKS GALLERY</CardTitle>
             <CardDescription className="text-1xl">
               Choose the type of images you would like to create.
             </CardDescription>
