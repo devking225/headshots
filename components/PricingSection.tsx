@@ -47,7 +47,7 @@ export default function PricingSection() {
             <div className='mt-10 text-center'>
               <Link href='/login'>
                 {' '}
-                <Button className='w-3/4 py-6 px-2 md:px-8 text-md shadow-lg flex md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#167ef9] hover:bg-[#167ef9] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all'>
+                <Button className='w-3/4 py-6 px-2 md:px-8 text-md shadow-lg flex md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] hover:bg-[#20aca0] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all'>
                   {option.buttonText}
                 </Button>
               </Link>

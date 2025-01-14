@@ -44,7 +44,7 @@ export default async function Navbar() {
       <div className='fixed w-full total'>
         <div className='topbar w-full px-4 lg:px-20'>
           <div className='w-full flex flex-col lg:flex-row items-center'>
-            <div className='lg:w-3/4 w-full  md:px-4'>
+            <div className='lg:w-3/4 w-full  md:px-4 text-[#1b145d]'>
               <div
                 className='overflow-hidden'
                 dangerouslySetInnerHTML={{
@@ -66,11 +66,11 @@ export default async function Navbar() {
           <div className='flex gap-2 h-full'>
             <Link href='/' className="flex" style={{justifyContent:"center", alignItems:"center",justifyItems:"center"}}>
               <img src={logo.src} alt="logo" className="h-[60px]"/>
-              <label className='font-bold text-[30px] text-[#167ef9]'>HEADSHOT</label>
+              <label className='font-bold text-[30px] text-[#1b145d]'>HEADSHOT</label>
             </Link>
           </div>
 
-          <div className='hidden lg:flex flex-row gap-2'>
+          <div className='hidden lg:flex flex-row gap-2 text-[#1b145d]'>
             <Link href='/overview'>
               <Button variant={'ghost'} className='text-[16px]'>
                 Home
@@ -93,7 +93,7 @@ export default async function Navbar() {
           </div>
 
           <div
-            className='flex gap-4 lg:ml-auto'
+            className='flex gap-4 lg:ml-auto text-[#1b145d]'
             style={{ alignItems: 'center', justifyItems: 'center' }}
           >
             {!user && (
@@ -104,7 +104,7 @@ export default async function Navbar() {
                   </Button>
                 </Link>
                 <Link href='/login'>
-                  <Button className='lg:w-full py-6 px-2 md:px-8 shadow-md text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#167ef9] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all'>
+                  <Button className='lg:w-full py-6 px-2 md:px-8 shadow-md text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all'>
                     Get Started
                   </Button>
                 </Link>

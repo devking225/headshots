@@ -6,9 +6,8 @@ import { redirect } from 'next/navigation';
 import introduce from '/public/introduce.png';
 import bannerImg from '/public/banner_pic.png';
 
-import male from '/public/male.png';
-import female from '/public/female.png';
 import product_users from '/public/product_users.png';
+import companys from "/public/companys.png";
 
 import { Button } from '@/components/ui/button';
 import ExplainerSection from '@/components/ExplainerSection';
@@ -32,11 +31,9 @@ export default async function Index() {
   return (
     <div className='flex flex-col items-center pt-16 px-20'>
       <div className='flex flex-col lg:flex-row items-center gap-8 p-8 w-full bg-[#E0FAFA] px-20 rounded-lg space-y-8'>
-        <div className='flex flex-col space-y-4 lg:w-2/5 w-full'>
-          <h1 className='text-6xl font-bold'>
-            <span className='text-transparent text-[#167ef9]'>
+        <div className='flex flex-col space-y-4 lg:w-1/2 w-full'>
+          <h1 className='text-6xl font-bold text-[#1b145d]'>
               Professional AI Headshots
-            </span>{' '}
             in minutes.
           </h1>
           <p className='text-lg'>
@@ -45,7 +42,7 @@ export default async function Index() {
           </p>
           <div className='flex flex-col space-y-2'>
             <Link href='/login'>
-              <Button className='lg:w-2/3 py-6 px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#167ef9] hover:bg-[#167ef9] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all'>
+              <Button className='lg:w-2/3 py-6 px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] hover:bg-[#20aca0] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all'>
                 Create Headshots Now
               </Button>
             </Link>
@@ -62,7 +59,7 @@ export default async function Index() {
             </div>
           </div>
         </div>
-        <div className='lg:w-3/5 w-full mt-8 lg:mt-0'>
+        <div className='lg:w-1/2 w-full mt-8 lg:mt-0'>
           <img
             src={bannerImg.src}
             alt='AI headshot'
@@ -72,14 +69,17 @@ export default async function Index() {
         </div>
       </div>
       <hr />
+      <div className="max-w-[100%] w-[100%] mx-auto overflow-hidden relative">
+        <img src={companys.src} alt="companys" className="w-[240%] max-w-[240%]  animate-scroll" /> 
+      </div>
       {/*AI Photos part*/}
       {/*start*/}
       <div
-        className='w-full px-20 mt-16 p-8 bg-gray-100 rounded-lg space-y-8 lg:py-10'
+        className='w-full px-20 p-16 bg-gray-100 rounded-lg space-y-8 lg:py-10'
         style={{ position: 'relative' }}
       >
         <div className='w-full relative h-[600px]'>
-          <h1 className='text-5xl font-bold text-transparent bg-clip-text text-[#167ef9] pb-8'>
+          <h1 className='text-5xl font-bold  bg-clip-text text-[#1b145d] pb-8'>
             We do AI photoshoots
           </h1>
           <h1 className='text-2xl font-semibold mt-0'>

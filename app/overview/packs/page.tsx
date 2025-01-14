@@ -26,7 +26,7 @@ export default async function Index() {
         className="flex flex-1 flex-col gap-2"
       >
         <Link href="/overview" className="text-sm w-fit">
-          <Button variant={"outline"} className="w-[500px] py-6 text-[white] px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#167ef9] hover:bg-[#167ef9] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
+          <Button variant={"outline"} className="w-[500px] py-6 text-[white] px-2 md:px-8 mt-4 shadow-md md:mt-6 text-xl flex w-full md:w-auto  md:inline-flex justify-center items-center rounded-full  font-semibold bg-[#20aca0] hover:bg-[#20aca0] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
             <FaArrowLeft className="mr-2" />
             Go Back
           </Button>
