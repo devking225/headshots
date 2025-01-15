@@ -14,9 +14,7 @@ import { Button } from './ui/button';
 import React from 'react';
 import { Database } from '@/types/supabase';
 import ClientSideCredits from './realtime/ClientSideCredits';
-
 import logo from '/public/logo.png';
-import product_use_avatar from '/public/product_use_avatar.png';
 
 export const dynamic = 'force-dynamic';
 
@@ -44,7 +42,7 @@ export default async function Navbar() {
       <div className='fixed w-full total'>
         <div className='topbar w-full px-4 lg:px-20'>
           <div className='w-full flex flex-col lg:flex-row items-center'>
-            <div className='lg:w-3/4 w-full  md:px-4 text-[#1b145d]'>
+            <div className='lg:w-[85%] w-full  md:px-4 text-[#1b145d]'>
               <div
                 className='overflow-hidden'
                 dangerouslySetInnerHTML={{
@@ -54,19 +52,43 @@ export default async function Navbar() {
                 }}
               />
             </div>
-            <div className='lg:w-1/4 w-full  md:px-4'>
-              <span>
+            <div className='lg:w-[15%] w-full  md:px-4 text-[14px]'>
+              {/* <span>
                 <span className='text-orange-500'>✔</span>2413,241+ headshots created
+              </span> */}
+              <span className="flex" style={{ justifyContent: "space-between" }}>
+                <div className="group relative flex content-center items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-2 text-center text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+                  <div className="flex items-center justify-start space-x-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3">
+                      <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-6.5 6.326a6.52 6.52 0 0 1-1.5.174 6.487 6.487 0 0 1-5.011-2.36l.49-.98a.423.423 0 0 1 .614-.164l.294.196a.992.992 0 0 0 1.491-1.139l-.197-.593a.252.252 0 0 1 .126-.304l1.973-.987a.938.938 0 0 0 .361-1.359.375.375 0 0 1 .239-.576l.125-.025A2.421 2.421 0 0 0 12.327 6.6l.05-.149a1 1 0 0 0-.242-1.023l-1.489-1.489a.5.5 0 0 1-.146-.353v-.067a6.5 6.5 0 0 1 5.392 9.23 1.398 1.398 0 0 0-.68-.244l-.566-.566a1.5 1.5 0 0 0-1.06-.439h-.172a1.5 1.5 0 0 0-1.06.44l-.593.592a.501.501 0 0 1-.13.093l-1.578.79a1 1 0 0 0-.553.894v.191a1 1 0 0 0 1 1h.5a.5.5 0 0 1 .5.5v.326Z" clip-rule="evenodd"></path></svg> <span className="uppercase">LANGUAGE</span></div> <ul className="hidden group-hover:flex flex-col absolute bg-white shadow rounded-md top-2 justify-start items-start py-1 w-[160px]"><div className="text-xs text-gray-700 font-semibold pb-1.5 px-2.5 border-b border-gray-100 w-full text-left">
+                        SELECT LANGUAGE
+                      </div>
+                    <li className="border-b border-gray-100 w-full text-left hover:bg-gray-100 hover:font-bold">
+                      <a href="/blog" aria-current="page" className="w-full py-1.5 px-2.5 block nuxt-link-exact-active nuxt-link-active">
+                        <span>English</span></a></li><li className="border-b border-gray-100 w-full text-left hover:bg-gray-100 hover:font-bold">
+                      <a href="/es/blog" className="w-full py-1.5 px-2.5 block">
+                        <span>Spain</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="group relative flex content-center items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-2 text-center text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+                  <div className="flex items-center justify-start space-x-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3">
+                      <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-6.5 6.326a6.52 6.52 0 0 1-1.5.174 6.487 6.487 0 0 1-5.011-2.36l.49-.98a.423.423 0 0 1 .614-.164l.294.196a.992.992 0 0 0 1.491-1.139l-.197-.593a.252.252 0 0 1 .126-.304l1.973-.987a.938.938 0 0 0 .361-1.359.375.375 0 0 1 .239-.576l.125-.025A2.421 2.421 0 0 0 12.327 6.6l.05-.149a1 1 0 0 0-.242-1.023l-1.489-1.489a.5.5 0 0 1-.146-.353v-.067a6.5 6.5 0 0 1 5.392 9.23 1.398 1.398 0 0 0-.68-.244l-.566-.566a1.5 1.5 0 0 0-1.06-.439h-.172a1.5 1.5 0 0 0-1.06.44l-.593.592a.501.501 0 0 1-.13.093l-1.578.79a1 1 0 0 0-.553.894v.191a1 1 0 0 0 1 1h.5a.5.5 0 0 1 .5.5v.326Z" clip-rule="evenodd"></path></svg> <span className="uppercase">ABOUT US</span>
+                  </div>
+                </div>
               </span>
+
             </div>
           </div>
         </div>
 
         <div className='flex w-full px-4 lg:px-40 py-2 items-center border-b text-center gap-8 justify-between mynav'>
           <div className='flex gap-2 h-full'>
-            <Link href='/' className="flex" style={{justifyContent:"center", alignItems:"center",justifyItems:"center"}}>
-              <img src={logo.src} alt="logo" className="h-[60px]"/>
-              <label className='font-bold text-[30px] text-[#1b145d]' style={{cursor:"pointer"}}>INSTANT HEADSHOTS</label>
+            <Link href='/' className="flex" style={{ justifyContent: "center", alignItems: "center", justifyItems: "center" }}>
+              <img src={logo.src} alt="logo" className="h-[60px]" />
+              <label className='font-bold text-[30px] text-[#1b145d]' style={{ cursor: "pointer" }}>INSTANT HEADSHOTS</label>
             </Link>
           </div>
 
@@ -74,6 +96,16 @@ export default async function Navbar() {
             <Link href='/overview'>
               <Button variant={'ghost'} className='text-[16px]'>
                 Home
+              </Button>
+            </Link>
+            <Link href='/faq'>
+              <Button variant={'ghost'} className='text-[16px]'>
+                FAQ
+              </Button>
+            </Link>
+            <Link href='/blog'>
+              <Button variant={'ghost'} className='text-[16px]'>
+                Blog
               </Button>
             </Link>
             {packsIsEnabled && (
@@ -114,7 +146,7 @@ export default async function Navbar() {
             {user && (
               <div className='flex flex-row gap-4 text-center align-middle justify-center'>
                 {stripeIsConfigured && <ClientSideCredits creditsRow={credits ? credits : null} />}
-                <DropdownMenu style={{zIndex:"9999"}}>
+                <DropdownMenu>
                   <DropdownMenuTrigger asChild className='cursor-pointer'>
                     <AvatarIcon height={24} width={24} className='text-primary' />
                   </DropdownMenuTrigger>
