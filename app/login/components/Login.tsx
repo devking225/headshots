@@ -66,8 +66,8 @@ export const Login = ({
     inviteToken = searchParams['inviteToken'];
   }
 
-  const protocol = host?.includes('localhost') ? 'http' : 'https';
-  const vercelUrl = process.env.NEXT_VERCEL_URL; // Access the Vercel URL from the .env file
+  // const protocol = host?.includes('localhost') ? 'http' : 'https';
+  const vercelUrl = process.env.VERCEL_URL; // Access the Vercel URL from the .env file
   const redirectUrl = `${vercelUrl}/auth/callback`;
 
   console.log('redirect url = >>>', redirectUrl);
