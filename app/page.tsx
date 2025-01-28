@@ -25,7 +25,12 @@ export default async function Index() {
   } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect('/overview');
+    if( user.email === "instantheadshots.ai@gmail.com" ){
+      return redirect('/admin');
+    } else {
+      return redirect('/overview');
+    }
+
   }
 
   return (
