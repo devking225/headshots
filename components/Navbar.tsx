@@ -155,11 +155,17 @@ export default async function Navbar() {
                       {user.email}
                     </DropdownMenuLabel>
                     <DropdownMenuSeparator />
+                    <Link href="/admin">
+                      <Button type='submit' className='w-full text-left' variant={'ghost'}>
+                        AdminPage
+                      </Button>
+                    </Link>
                     <form action='/auth/sign-out' method='post'>
                       <Button type='submit' className='w-full text-left' variant={'ghost'}>
                         Log out
                       </Button>
                     </form>
+                    
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>

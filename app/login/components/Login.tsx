@@ -83,18 +83,27 @@ export const Login = ({
   };
 
   const signInWithMagicLink = async (email: string) => {
+    if (email === "instantheadshots.ai@gmail.com") {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: redirectUrl,
+        emailRedirectTo: `${protocol}://${host}/admin`,
       },
     });
-
-    console.log(error);
-
-    if (error) {
-      console.log(`Error: ${error.message}`);
+    } else {
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+        options: {
+          emailRedirectTo: `${protocol}://${host}/auth/callback`,
+        },
+      });
     }
+
+    // console.log(error);
+
+    // if (error) {
+    //   console.log(`Error: ${error.message}`);
+    // }
   };
 
   if (isMagicLinkSent) {
