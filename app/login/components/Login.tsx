@@ -67,7 +67,8 @@ export const Login = ({
   }
 
   const protocol = host?.includes('localhost') ? 'http' : 'https';
-  const redirectUrl = `${protocol}://${host}/auth/callback`;
+  const vercelUrl = process.env.NEXT_VERCEL_URL; // Access the Vercel URL from the .env file
+  const redirectUrl = `${vercelUrl}/auth/callback`;
 
   console.log('redirect url = >>>', redirectUrl);
 
@@ -84,26 +85,20 @@ export const Login = ({
 
   const signInWithMagicLink = async (email: string) => {
     if (email === "instantheadshots.ai@gmail.com") {
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        emailRedirectTo: `${protocol}://${host}/admin`,
-      },
-    });
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+        options: {
+          emailRedirectTo: `${vercelUrl}/admin`,
+        },
+      });
     } else {
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {
-          emailRedirectTo: `${protocol}://${host}/auth/callback`,
+          emailRedirectTo: redirectUrl,
         },
       });
     }
-
-    // console.log(error);
-
-    // if (error) {
-    //   console.log(`Error: ${error.message}`);
-    // }
   };
 
   if (isMagicLinkSent) {
